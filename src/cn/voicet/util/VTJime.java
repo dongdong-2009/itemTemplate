@@ -9,26 +9,26 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 
 /**
- * static�����ķ����൱��ȫ�ֺ���ɱ��ⲿֱ�ӵ��ã������޹�
+ * static声明的方法相当于全局函数，可被外部直接调用，与类无关
  * @author applexiang
  */
 public class VTJime {
 	
 	private static Logger log = Logger.getLogger(VTJime.class);
 	/**
-	 * �������ȡ��ݣ��Ž�map
-	 * @param map 	������
-	 * @param rs	���
+	 * 根据列名取数据，放进map
+	 * @param map 	存放数据
+	 * @param rs	结果集
 	 */
 	public static void putMapDataByColName(Map<String, String> map,ResultSet rs) {
 		String colName;
 		try {
-			//��Ԫ����л������ 
+			//从元数据中获得列数 
 			ResultSetMetaData rsm =rs.getMetaData();
-			//�����ֶε���Ŀ
+			//所有字段的数目
 			int col = rsm.getColumnCount();
 			for(int i=1; i<=col; i++) {
-				//����ֶε�����ֵȡ���ֶε����
+				//根据字段的索引值取得字段的名称
 				colName=rsm.getColumnName(i);
 				if(null!=rs.getString(i) && !rs.getString(i).equals("")){
 					map.put(colName, rs.getString(i));
@@ -42,14 +42,14 @@ public class VTJime {
 	}
 	
 	/**
-	 * ׼���洢������[SQLServer]
+	 * 准备存储过程入参[SQLServer]
 	 * m money
 	 * i integer
 	 * f float
 	 * String ix[][]={{"-1","o"},{"2","m"},{"3","i"},{"4","f"}}; 
 	 * @param cs
-	 * @param sr String	ҳ��������� 
-	 * @param ix index	�Դ洢������˳��Ϊ�±�,��0��ʼ����,������������	
+	 * @param sr String	页面参数数组 
+	 * @param ix index	以存储过程入参顺序为下标,从0开始定义,参数类型数组	
 	 * @throws NumberFormatException
 	 * @throws SQLException
 	 */
@@ -103,5 +103,4 @@ public class VTJime {
 			System.out.println("");
 		}
 	}
-	
 }

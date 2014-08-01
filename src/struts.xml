@@ -25,6 +25,10 @@
 			<result name="show_error">/WEB-INF/page/admin/login.jsp</result>
 		</action>
 		
+		<!-- 系统日志查看 -->
+		<action name="systemLogAction_*" class="systemLogAction" method="{1}">
+			<result name="show_log">/WEB-INF/page/admin/systemLog.jsp</result>
+		</action>
 	</package>  
 	<package name="dot" namespace="/" extends="json-default">
 		<!-- login -->

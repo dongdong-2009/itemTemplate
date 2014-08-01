@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
-<%@taglib uri="/struts-tags" prefix="s" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<link type="text/css" rel="stylesheet" href="<c:url value='/style/style-b.css'/>" />
-	<link type="text/css" rel="stylesheet" href="<c:url value='/style/style.css'/>" />
-	<script type="text/javascript" src="<c:url value='/script/jquery-1.5.1.min.js'/>"></script>
+	<link type="text/css" href="<c:url value='/style/common_cn.css'/>" rel="stylesheet" />
+	<link type="text/css" href="<c:url value='/style/layout.css'/>" rel="stylesheet" />
+	<script type="text/javascript" src="<c:url value='/script/jquery-1.11.1.min.js'/>"></script>
 	<script type="text/javascript" src="<c:url value='/script/cookie.js'/>"></script>
  	<script type="text/javascript" src="<c:url value='/script/login.js'/>"></script>
  	<script type="text/javascript">
@@ -34,93 +34,55 @@
 		return true;
 	}
  	</script>
- 	<style type="text/css">
- 		.errorMessage{padding-bottom:2px; padding-right:30px; height:5px}
- 	</style>
  	<title>扶贫观察点管理系统</title>
  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
  	<meta http-equiv="cache-control" content="no-cache"/>
  	<meta http-equiv="expires" content="0"/>
 </head>
 <body>
-	<table width="1024px" height="768px" border="0" cellpadding="0" cellspacing="0" align="center" background="${pageContext.request.contextPath }/images/vt_rec_loginback3.jpg ">
-		<tr>
-			<td>
-				<table width="566px" height="251px" border="0" align="center" cellpadding="0" cellspacing="0">
-					<tr height="85px" >
-						<td background="${pageContext.request.contextPath }/images/vt_rec_login1.png">
-							<table>
-								<tr>
-									<td class="version"><s:property value="#application.vta.product"/></td>
-								</tr>
-								<tr>
-									<td class="company"><strong><s:property value="#application.vta.customer"/></strong></td>
-								</tr>
-							</table>
-						</td>
-					</tr>
-					<tr height="130px">
-						<td background="${pageContext.request.contextPath }/images/vt_rec_login2.png">
-							<form name="Form1" action="" method="post">
-							<table cellpadding="0" cellspacing="0">
-								<tr>
-									<td width="284px"></td>
-									<td width="284px">
-										<table class="table_l" border="0" cellpadding="0" cellspacing="0">
-											<colgroup>
-												<col width="90"/>
-												<col/>
-											</colgroup>
-											<tbody>
-												<tr height="24px" style="padding-top:2px;">
-													<th>账号&nbsp;</th>
-													<td><input type="text" id="account" name="account"  autocomplete="off" value="" placeholder="输入账号" tabindex="1" class="inputbox" onblur="this.className='inputbox'" onfocus="this.className='inputbox2'"/></td>
-												</tr>
-												<tr height="24px">
-													<th>密码&nbsp;</th>
-													<td><input type="password" id="password" name="password"  autocomplete="off" value="" placeholder="输入密码" tabindex="2" class="inputbox" onblur="this.className='inputbox'" onfocus="this.className='inputbox2'"/></td>
-												</tr>
-												<tr height="24px">
-													<th>验证码&nbsp;</th>
-													<td align="left">
-														<input type="text" id="vercode" name="vercode" placeholder="输入验证码" class="inputboxver1" onfocus="this.className='inputboxver2'" maxlength="4"/>
-														<input type="hidden" id="bpath" value="${pageContext.request.contextPath }"/>
-														<img src="${pageContext.request.contextPath }/verCode" id="verImg" onclick="changeVerCode()" style="cursor:pointer; vertical-align:middle;" height="20" width="60"/>
-													</td>
-												</tr>
-												<tr height="24px">
-													<th></th>
-													<td>
-														<input type="checkbox" id="rememberPass" name="rememberPass" value="yes" class="cbox-midd"/><label for="auto" class="lab-midd">记住密码</label>
-													</td>
-												</tr>
-												<tr height="24px">
-													<th></th>
-													<td>
-														<input type="button" onclick="login()" value="登&nbsp;&nbsp;录" class="button4"/>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</td>
-								</tr>
-							</table>
-							</form>
-						</td>
-					</tr>
-					<tr height="32px">
-						<td background="${pageContext.request.contextPath }/images/vt_rec_login3.png" style="text-align:right;">
-							<font style="color:red"><s:fielderror value="error"/></font>
-						</td>
-					</tr>
+<div class="login_wrap">
+   	<div class="login_main">
+       	<div class="login_main_up">
+           	<div class="login_product"><s:property value="#application.vta.product"/></div>
+            <div class="login_company"><strong><s:property value="#application.vta.customer"/></strong></div>
+		</div>
+		<div class="login_main_down">
+           	<div class="login_content">
+               	<table class="table_l" border="0" cellpadding="0" cellspacing="0">
+					<tbody>
+						<tr height="24px">
+							<th class="login_label">账号&nbsp;</th>
+							<td><input type="text" id="account" name="account"  autocomplete="off" value="" placeholder="输入账号" tabindex="1" class="ipt155"/></td>
+						</tr>
+						<tr height="24px">
+							<th class="login_label">密码&nbsp;</th>
+							<td><input type="password" id="password" name="password"  autocomplete="off" value="" placeholder="输入密码" tabindex="2" class="ipt155"/></td>
+						</tr>
+						<tr height="24px">
+							<th class="login_label">验证码&nbsp;</th>
+							<td align="left">
+								<input type="text" id="vercode" name="vercode" placeholder="输入验证码" class="ipt70" maxlength="4"/>
+								<input type="hidden" id="bpath" value="${pageContext.request.contextPath }"/>
+								<img src="${pageContext.request.contextPath }/verCode" id="verImg" onclick="changeVerCode()" class="cursor_p" height="20" width="60"/>
+							</td>
+						</tr>
+						<tr height="24px">
+							<th></th>
+							<td>
+								<input type="checkbox" id="rememberPass" name="rememberPass" value="yes"/><label for="rememberPass">记住密码</label>
+							</td>
+						</tr>
+						<tr height="24px">
+							<th></th>
+							<td>
+								<input type="button" onclick="login()" value="登&nbsp;&nbsp;录" class="btn4"/>
+							</td>
+						</tr>
+					</tbody>
 				</table>
-			</td>
-		</tr>
-	</table>
-	<form name="Form2" action="" method="post">
-		<input type="hidden" name="product" value="<s:property value="#application.vta.product"/>"/>
-		<input type="hidden" name="customer" value="<s:property value="#application.vta.customer"/>"/>
-		<input type="hidden" name="provider" value="<s:property value="#application.vta.provider"/>"/>
-	</form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

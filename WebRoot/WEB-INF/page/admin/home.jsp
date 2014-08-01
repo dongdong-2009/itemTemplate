@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@taglib uri="/struts-tags" prefix="s" %>
 <%
 String path = request.getContextPath();
@@ -9,13 +10,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>扶贫观察点管理系统</title>
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/style/layout.css"/>
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/style/style.css"/>
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/style/style-b.css"/>
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath }/style/menu.css"/>
-	<script type="text/javascript" src="${pageContext.request.contextPath }/script/jquery-1.5.1.min.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath }/script/menu.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath }/script/updatepwd.js"></script>
+	<link type="text/css" href="<c:url value='/style/common_cn.css'/>" rel="stylesheet" />
+	<link type="text/css" href="<c:url value='/style/layout.css'/>" rel="stylesheet" />
+	<link type="text/css" href="<c:url value='/style/menu.css'/>" rel="stylesheet" />
+	<script type="text/javascript" src="<c:url value='/script/jquery-1.11.1.min.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/script/menu.js'/>"></script>
+	<script type="text/javascript" src="<c:url value='/script/updatepwd.js'/>"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			confPass.init();
@@ -32,31 +32,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div id="container">
 	<!-- header -->
   	<div id="header">
-  		<div class="title1"><s:property value="#application.vta.product"/></div>
-  		<div class="title2"><s:property value="#application.vta.customer"/></div>
-  		<div class="title3"><s:property value="#application.vta.provider"/></div>
+  		<div class="tit1"><s:property value="#application.vta.product"/></div>
+  		<div class="tit2"><s:property value="#application.vta.customer"/></div>
+  		<div class="tit3"><s:property value="#application.vta.provider"/></div>
     </div>
     <!-- nav -->
   	<div id="nav">
-    	<div class="nav-left">
-    		<div style="float:left">
+    	<div class="nav_left">
+    		<div class="nav_left_wel">
     		<span>欢迎：&nbsp;<s:property value="#session.vts.roleName"/></span><span><s:property value="#session.vts.username"/></span>
     		</div>
-    		<div style="float:left;" id="navigate"></div>
+    		<div id="navigate" class="nav_left_path"></div>
         </div>
-        <div class="nav-right">
+        <div class="nav_right">
             <span><a href="javascript:popDivOpen()" id="bt">修改密码</a></span>
             <span><a href="${pageContext.request.contextPath }/userAction_logout.action" onclick="return confirm('你确定要注销吗?')" target="_top">[&nbsp;注销&nbsp;]</a></span>
         </div>
     </div>
     <!-- main -->
   	<div id="main">
-    	<div class="main-left">
+    	<div class="main_left">
             <ul class="menu">
                 <s:property value="#application.vta.getMenuInfoByRoleID(#session.vts.roleID, #session.vts.account)" escape="false"/>
             </ul>
         </div>
-        <div class="main-right">
+        <div class="main_right">
             <iframe name="mainFrame" src="main.jsp" class="mainFrame" scrolling="no" marginwidth="1" marginheight="1" frameborder="0">
         		
             </iframe>

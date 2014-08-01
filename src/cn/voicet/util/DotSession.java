@@ -134,6 +134,7 @@ public class DotSession {
 		map = new HashMap();
 		subPathTitle = new SubPathTitle();
 		curYear = Calendar.getInstance().get(Calendar.YEAR);
+		list=null;
 		list5=null;
 		//
 		arrayStackInfo = new StackInfo[8];
