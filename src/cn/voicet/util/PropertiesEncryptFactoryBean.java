@@ -6,9 +6,10 @@ import org.springframework.beans.factory.FactoryBean;
 
 /**
  * 对Spring配置文件中数据库用户名密码进行加密
- * @author Administrator
+ * @author ax
  *
  */
+@SuppressWarnings("unchecked")
 public class PropertiesEncryptFactoryBean implements FactoryBean {
 	private Properties properties;
 
@@ -18,7 +19,7 @@ public class PropertiesEncryptFactoryBean implements FactoryBean {
         return getProperties();
     }
 
-    public Class getObjectType() {
+	public Class getObjectType() {
         return java.util.Properties.class;
     }
 
