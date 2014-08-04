@@ -35,6 +35,7 @@
 
 /* contentWrap */
 #contentWrap{width:868px; height:672px; text-align:center; background:#E0EEFB;}
+.content_List{width:868px; height:620px; text-align:center;}
 .log_form{width:856px; height:40px;border: 1px solid #3B9FFF; padding-left:10px;margin-top:1px;}
 .log_form li{float:left; margin-right:10px; display:inline; padding:10px 0px 0px;}
 .log_wrap{width:868px; height:594px; border-bottom:0px solid #3B9FFF; margin-top:10px;}
@@ -42,14 +43,8 @@
 .split_page_wrap{width:100%; height:26px; line-height:26px; text-align:center;}
 .split_page_wrap a{margin-right:10px;}
 
-.tab_border{border-top:1px solid #3B9FFF; border-left: 1px solid #3B9FFF;}
-
-.tab_border th {
-    border-right: 1px solid #3B9FFF;
-    border-bottom: 1px solid #3B9FFF;
-}
-.tab_border td {
-    border-right: 1px solid #3B9FFF;
-    border-bottom: 1px solid #3B9FFF;
-}
+/* table border */
+.tab_border{border-top:1px solid #3B9FFF; border-left:1px solid #3B9FFF;}
+.tab_border th{border-right:1px solid #3B9FFF; border-bottom:1px solid #3B9FFF;}
+.tab_border td{border-right:1px solid #3B9FFF; border-bottom:1px solid #3B9FFF;}
 
