@@ -19,8 +19,9 @@
 </head>
 <body>
 <div id="contentWrap">
+	<h3 class="h3_title">System Log</h3>
    	<form action="<c:url value='/systemLogAction_home.action'/>" method="post" id="searchForm" name="searchForm">
-   	<ul class="log_form">
+   	<ul class="queryWrap_ul">
 		<li><label>开始日期：</label><input type="text" name="startdate" id="startdate" class="Wdate" style="width:90px; height:18px;" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'enddate\')||\'2050-01-01\'}',skin:'whyGreen'})" value="<s:property value="startdate"/>"/></li>
         <li><label>结束日期：</label><input type="text" name="enddate" id="enddate" class="Wdate" style="width:90px; height:18px;" onclick="WdatePicker({minDate:'#F{$dp.$D(\'startdate\')}',maxDate:'%y-%M-%d',skin:'whyGreen'})" value="<s:property value="enddate"/>"/></li>
         <li><input type="submit" id="searchImg" class="btn4" value="查&nbsp;&nbsp;询"/></li>
@@ -28,7 +29,7 @@
 	<input type="hidden" id="totalPage" name="totalPage" value="<s:property value="totalPage"/>" />
    	<input type="hidden" id="curPage" name="curPage" value="<s:property value="curPage"/>" />
     </form>
-	<div class="log_wrap">
+	<div class="content_List568">
 		<table cellpadding="0" cellspacing="0" class="tab_border">
 			<thead class="tab_head">
                  <tr>

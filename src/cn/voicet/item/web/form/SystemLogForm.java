@@ -13,7 +13,7 @@ public class SystemLogForm {
 	private String msgtype;
 	private String sender;
 	private Integer totalPage;	//总页数
-	private int pageSize = 27;	//每页行数
+	private int pageSize = 26;	//每页行数
 	private int curPage = 1;	//当前页, 默认为第一页, 为0时,则不做分页处理
 	public String getDate() {
 		return date;
