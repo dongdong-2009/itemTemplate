@@ -7,7 +7,7 @@
 	<!-- logon filter -->
 	<filter>
 		<filter-name>LogonFilter</filter-name>
-		<filter-class>cn.voicet.item.filter.LogonFilter</filter-class>
+		<filter-class>cn.voicet.filter.LogonFilter</filter-class>
 	</filter>
 	<filter-mapping>
 		<filter-name>LogonFilter</filter-name>
@@ -39,7 +39,7 @@
 	<!-- vercode -->
 	<servlet>
 		<servlet-name>VerCode</servlet-name>
-		<servlet-class>cn.voicet.item.servlet.VerCode</servlet-class>
+		<servlet-class>cn.voicet.servlet.VerCode</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>VerCode</servlet-name>
