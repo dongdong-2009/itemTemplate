@@ -36,12 +36,19 @@
 /* contentWrap */
 #contentWrap{width:868px; height:672px; text-align:center; background:#E0EEFB;}
 
+/* query param */
 .queryWrap_ul{width:856px; height:40px;border: 1px solid #3B9FFF; padding-left:10px;margin-top:1px;}
 .queryWrap_ul li{float:left; margin-right:10px; display:inline; padding:10px 0px 0px;}
 
-.content_List620{width:868px; height:620px; text-align:center;}
-.content_List568{width:868px; height:568px; border-bottom:0px solid #3B9FFF; margin-top:10px;}
+.queryWrap_ul_h60{width:856px; height:60px;border: 1px solid #3B9FFF; padding-left:10px;margin-top:1px;}
+.queryWrap_ul_h60 li{float:left; margin-right:30px; display:inline; padding:5px 0px 0px;}
 
+/* data list */
+.content_List548{width:868px; height:548px; border-bottom:0px solid #3B9FFF; margin-top:10px;}
+.content_List568{width:868px; height:568px; border-bottom:0px solid #3B9FFF; margin-top:10px;}
+.content_List620{width:868px; height:620px; text-align:center;}
+
+/* split page */
 .split_page_wrap{width:100%; height:26px; line-height:26px; text-align:center;}
 .split_page_wrap a{margin-right:10px;}
 

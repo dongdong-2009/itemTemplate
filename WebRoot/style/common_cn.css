@@ -18,6 +18,10 @@ table {border-collapse:collapse;border-spacing:0; width:100%; line-height:20px;}
 .right{float:right;}
 .cursor_p{cursor:pointer;}
 
+.tal{text-align:left;}
+.tar{text-align:right;}
+.tac{text-align:center;}
+
 /* 超链接(定义了"链接、已访问过的链接、鼠标停在上方时、点下鼠标时"的样式,注意，必须按以上顺序写，否则显示可能和你预想的不一样。记住它们的顺序是'LVHA') */
 a:link, a:visited{text-decoration: none;color: #1F376D;}
 a:hover, a:active{text-decoration: underline;color: #BD0A01;border: none;}
@@ -30,6 +34,7 @@ a:hover, a:active{text-decoration: underline;color: #BD0A01;border: none;}
 .ipt20{width:20px;height:12px; padding:2px 5px; border:1px solid #CCC; color:#666;}
 .ipt70{width:70px;height:16px; padding:2px 5px; border:1px solid #CCC; color:#666;}
 .ipt90{width:70px;height:16px; padding:2px 5px; border:1px solid #CCC; color:#666;}
+.ipt100{width:100px;height:16px; padding:2px 5px; border:1px solid #CCC; color:#666;}
 .ipt155{width:155px;height:16px; padding:2px 5px; border:1px solid #CCC; color:#666;}
 
 
