@@ -10,4 +10,5 @@ itemTemplate
 	2.注解引用实现类全名
 	3.beans.xml文件注解扫描包名，jdbc配置文件信息
 	4.web.xml文件过滤器，验证码类全名
-	5.jPages 分页插件	
+	5.jPages 分页插件
+	5.响应式内容滑动插件bxSlider
