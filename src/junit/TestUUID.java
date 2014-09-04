@@ -12,7 +12,7 @@ public class TestUUID {
 		String qqNumber = "68547302";
 		String sep = "|";
 		//格式化日期 yyyyMMdd
-		String date = String.format("%tY%<tm%<td", new Date());
+		String date = String.format("%tY", new Date());
 		System.out.println("---------------");
 		System.out.println("订单号:"+qqNumber+sep+date+sep);
 	}
